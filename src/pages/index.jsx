@@ -1,3 +1,11 @@
+ import Link from "next/link"
+ 
  export default function Home(){
-    return <h1>Title</h1>
+    return (
+        <div>
+            <Link href="/estiloso">
+                estiloso
+            </Link>
+        </div>
+    )
  }
