@@ -1,20 +1,22 @@
+import Layout from "../components/Layout"
+
 export default function Jsx() {
+    const titulo =  <h1>JSX um e conceito Central</h1>
+    
+    function subtitulo() {
+        return <h2>{'muito legal'.toUpperCase()}</h2>
+    }
 
-const title = <h1>Title JSX</h1> 
+    return(
+        <Layout titulo='Entendendo o JSX'>
+        <div>
+           {titulo}
+           {subtitulo()}
+            <p>
+                {JSON.stringify({nome: 'Diogo', idade: 30})}
+            </p>
+        </div>
+        </Layout>
 
-function Sub () {
-    return   <h2>{"Testando"}</h2>
+    )
 }
-
-return (
-    <div>
-          {title}
-            {Sub}
-         <p>
-           {JSON.stringify({nome:"Pedro Gabriel", idade: 20})}
-          </p>
-    </div>
- 
-)
-
-};
